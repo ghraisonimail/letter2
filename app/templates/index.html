@@ -1,0 +1,37 @@
+<!-- index.html-->
+
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <h1>Online Parents Letter </h1>
+  <p class="lead">You can easily create your TG Parents Letter Here...</p><br>
+    <p class="lead">Kindly Fill Following Information</p><br>
+
+    <form action="/abc" method="post" >
+
+        <p > Department :</p>
+   <select name="department" >
+        <option value="FIRST YEAR">First Year </option>
+        <option value="DEPARTMENT OF COMPUTER ENGINEERING">Computer Engineering </option>
+        <option value="DEPARTMENT OF INFORMATION TECHNOLOGY">Information Technology </option>
+        <option value="DEPARTMENT OF ELECTRICAL ENGINEERING">Electrical Engineering </option>
+        <option value="DEPARTMENT OF MECHANICAL ENGINEERING">Mechanical Engineering </option>
+        <option value="DEPARTMENT OF CIVIL ENGINEERING">Civil Engineering </option>
+        <option value="DEPARTMENT OF ELECTRONICS & TELECOMMUNICATION ENGINEERING">Electronics & Telecommunication Engineering </option>
+  </select><br>
+        <p> Attendance Duration :</p>
+        Start Date: <input type="date" name="sdate">
+        End Date: <input type="date" name="ldate"><br>
+        Class: <input type="text" name="class_name"> exa: TE Computer<br>
+
+
+
+  <input type="submit" value="Submit">
+</form>
+    <form method=post enctype=multipart/form-data>
+    <input type=file name=file><br>
+    <input type=submit value=Upload>
+    </form>
+</div>
+{% endblock %}
